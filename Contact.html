@@ -1,79 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
     <link rel="stylesheet" href="css/webpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="js/keys.js"></script>
+    <script src="js/webpage.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init(EMAIL_JS_PUBLICKEY);
+        })();
+    </script>
 </head>
 <body>
 <div class="navigation">
-  <ul>
-      <li class="list" onclick="setTimeout(homePage, 200)">
-      <a href="#" id="homePage">
+    <ul>
+        <li class="list" onclick="setTimeout(homePage, 200)">
+            <a href="#" id="homePage">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
-        <span class="text">Home</span>
-      </a>
-    </li>
-      <li class="list" >
-          <a href="#" id="aboutPage" onclick="setTimeout(aboutPage, 200)">
+                <span class="text">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" id="aboutPage" onclick="setTimeout(aboutPage, 200)">
                 <span class="icon">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </span>
-        <span class="text">About Me</span>
-      </a>
-    </li>
-    <li class="list">
-        <a href="#" id="projects" onclick="setTimeout(projectPage, 200)">
+                <span class="text">About Me</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" id="projects" onclick="setTimeout(projectPage, 200)">
                 <span class="icon">
                     <ion-icon name="terminal-outline"></ion-icon>
                 </span>
-        <span class="text">Projects</span>
-      </a>
-    </li>
-    <li class="list active">
-      <a href="#">
+                <span class="text">Projects</span>
+            </a>
+        </li>
+        <li class="list active">
+            <a href="#">
                 <span class="icon">
                     <ion-icon name="chatbubbles-outline"></ion-icon>
                 </span>
-        <span class="text">Contact</span>
-      </a>
-    </li>
-      <li class="list">
-          <a href="#" id="settings-link">
+                <span class="text">Contact</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#" id="settings-link">
                 <span class="icon">
                     <ion-icon name="settings-outline"></ion-icon>
                 </span>
-              <span class="text">Settings</span>
-          </a>
-      </li>
-    <div class="indicator"></div>
-  </ul>
+                <span class="text">Settings</span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
 </div>
-
-<body>
 <h2>Contact Me</h2>
-<form id="contactForm" onsubmit="sendEmail(event)">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="subject">Subject:</label><br>
-    <input type="text" id="subject" name="subject" required><br>
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-    <input type="submit" value="Submit">
-</form>
-</body>
+<form onsubmit="event.preventDefault(); sendMail();">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-<script src="js/webpage.js"></script>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send</button>
+</form>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

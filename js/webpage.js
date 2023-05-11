@@ -55,33 +55,26 @@ function hidePopup() {
     }
 }
 
-function sendEmail(event) {
-    event.preventDefault();
+function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    }
+    const serviceID = "service_t71w4cw";
+    const templateID = "template_2if9iod";
 
-    // Initialize EmailJS with your user ID
-    emailjs.init("YOUR_USER_ID");
-
-    // Get the form values
-    const form = document.getElementById("contactForm");
-    const name = form.elements.name.value;
-    const email = form.elements.email.value;
-    const subject = form.elements.subject.value;
-    const message = form.elements.message.value;
-
-    // Send the email
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        from_name: name,
-        from_email: email,
-        subject: subject,
-        message: message
-    })
-        .then(function(response) {
-            console.log("Email sent successfully", response);
-            // You can add your own success message or redirect to another page here
-        }, function(error) {
-            console.error("Email sending failed", error);
-            // You can add your own error message or handling here
-        });
+    emailjs.send(serviceID, templateID, params)
+        .then(
+            res => {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+                console.log(res);
+                alert("Your message was sent successfully :)");
+            })
+        .catch((err) => console.log(err));
 }
+
 
 
