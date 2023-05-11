@@ -141,3 +141,24 @@ body {
 .navigation ul li:nth-child(5).active ~ .indicator {
     transform: translateX(calc(70px * 4));
 }
+
+.popup {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    color: #29fd53;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
