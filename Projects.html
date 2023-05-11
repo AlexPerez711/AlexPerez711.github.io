@@ -14,7 +14,7 @@
 <body>
 <div class="navigation">
     <ul>
-        <li class="list" ondblclick="homePage()">
+        <li class="list" onclick="setTimeout(homePage, 200)">
             <a href="#" id="homePage">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
@@ -22,7 +22,7 @@
                 <span class="text">Home</span>
             </a>
         </li>
-        <li class="list" ondblclick="aboutPage()">
+        <li class="list" onclick="setTimeout(aboutPage, 200)">
             <a href="#" id="aboutPage">
                 <span class="icon">
                     <ion-icon name="person-circle-outline"></ion-icon>
@@ -39,7 +39,7 @@
             </a>
         </li>
         <li class="list">
-            <a href="#" id="contact" ondblclick="contactPage()">
+            <a href="#" id="contact" onclick="setTimeout(contactPage, 200)">
                 <span class="icon">
                     <ion-icon name="chatbubbles-outline"></ion-icon>
                 </span>
@@ -73,13 +73,26 @@
         list.forEach((item) => item.classList.remove('active'));
         this.classList.add('active');
     }
+
     list.forEach((item) => item.addEventListener('click', activeLink));
 
-    function homePage(){window.location.replace(' ./Home_Page.html')}
-    function aboutPage(){window.location.replace(' ./About_Me.html')}
-    function contactPage(){window.location.replace(' ./Contact.html')}
+    function homePage() {
+        setTimeout(() => {
+            window.location.replace('./Home_Page.html');
+        }, 200);
+    }
 
+    function aboutPage() {
+        setTimeout(() => {
+            window.location.replace('./About_Me.html');
+        }, 200);
+    }
 
+    function contactPage() {
+        setTimeout(() => {
+            window.location.replace('./Contact.html');
+        }, 200);
+    }
 </script>
 </body>
 </html>

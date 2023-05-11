@@ -14,7 +14,7 @@
 <body>
 <div class="navigation">
   <ul>
-    <li class="list" ondblclick="homePage()">
+      <li class="list" onclick="setTimeout(homePage, 200)">
       <a href="#" id="homePage">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
@@ -22,8 +22,8 @@
         <span class="text">Home</span>
       </a>
     </li>
-    <li class="list" ondblclick="aboutPage()">
-      <a href="#" id="aboutPage">
+      <li class="list" >
+          <a href="#" id="aboutPage" onclick="setTimeout(aboutPage, 200)">
                 <span class="icon">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </span>
@@ -31,7 +31,7 @@
       </a>
     </li>
     <li class="list">
-      <a href="#" id="projects" ondblclick="projectPage()">
+        <a href="#" id="projects" onclick="setTimeout(projectPage, 200)">
                 <span class="icon">
                     <ion-icon name="terminal-outline"></ion-icon>
                 </span>
@@ -69,18 +69,32 @@
         crossorigin="anonymous">
 </script>
 <script>
-  const list = document.querySelectorAll('.list');
+    const list = document.querySelectorAll('.list');
 
-  function activeLink() {
-    list.forEach((item) => item.classList.remove('active'));
-    this.classList.add('active');
-  }
-  list.forEach((item) => item.addEventListener('click', activeLink));
+    function activeLink() {
+        list.forEach((item) => item.classList.remove('active'));
+        this.classList.add('active');
+    }
 
-  function projectPage(){window.location.replace(' ./Projects.html')}
-  function aboutPage(){window.location.replace(' ./About_Me.html')}
-  function homePage(){window.location.replace(' ./Home_Page.html')}
+    list.forEach((item) => item.addEventListener('click', activeLink));
 
+    function homePage() {
+        setTimeout(() => {
+            window.location.replace('./Home_Page.html');
+        }, 200);
+    }
+
+    function projectPage() {
+        setTimeout(() => {
+            window.location.replace('./Projects.html');
+        }, 200);
+    }
+
+    function aboutPage() {
+        setTimeout(() => {
+            window.location.replace('./About_Me.html');
+        }, 200);
+    }
 </script>
 </body>
 </html>
