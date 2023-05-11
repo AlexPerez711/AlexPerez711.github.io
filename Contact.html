@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <script src="js/keys.js"></script>
     <script src="js/webpage.js"></script>
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
         (function () {
-            emailjs.init(EMAIL_JS_PUBLICKEY);
+            emailjs.init('tmXNpWLCwle4UT6wi');
         })();
     </script>
 </head>
@@ -67,23 +66,39 @@
         <div class="indicator"></div>
     </ul>
 </div>
-<div>
-<h2 id="contactText">Contact Me</h2>
+<div class="contactAlign">
+    <div class="row">
+        <h2 class="col-6" id="contactText">Contact Me</h2>
+    </div>
+    <div class="emailForm">
+        <div class="row">
+            <form onsubmit="event.preventDefault(); sendMail();">
+                <div class="col-6">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="col-6">
+                    <label class="col-6" for="email">Email:</label>
+                </div>
+                <div class="col-6">
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="col-6">
+                    <label class="col-6" for="message">Message:</label>
+                </div>
+                <div class="col-6">
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" id="emailSend">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-<div class="emailForm">
-<form onsubmit="event.preventDefault(); sendMail();">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-
-    <button type="submit" id="emailSend">Send</button>
-</form>
-</div>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

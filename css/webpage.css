@@ -203,19 +203,29 @@ body {
     }
 }
 
-#contactText{
+#contactText {
     margin-right: 50px;
     font-size: xx-large;
 }
 
 .emailForm {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    background-color: #52e3fb;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-large;
+    color: black;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(1rem);
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+
+    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.3));
 }
 
-#emailSend{
+#emailSend {
     position: relative;
     display: inline-block;
     padding: 12px 36px;
@@ -230,3 +240,7 @@ body {
     background: linear-gradient(90deg, #0162c8, #55e7fc);
 }
 
+.contactAlign {
+    display: inline-block;
+    justify-content: space-evenly;
+}
