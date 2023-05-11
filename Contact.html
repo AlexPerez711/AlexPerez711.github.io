@@ -58,14 +58,21 @@
   </ul>
 </div>
 
-<div>
-  Contact me!
-</div>
-<div id="popup" class="popup hidden">
-    <h2>Settings</h2>
-    <p>This is a small popup for settings.</p>
-    <button onclick="hidePopup()">Close</button>
-</div>
+<body>
+<h2>Contact Me</h2>
+<form id="contactForm" onsubmit="sendEmail(event)">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject" required><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+
 <script src="js/webpage.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
