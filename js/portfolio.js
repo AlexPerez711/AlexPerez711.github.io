@@ -1,3 +1,5 @@
+'use strict'
+
 const list = document.querySelectorAll('.list');
 
 function activeLink() {
@@ -7,33 +9,30 @@ function activeLink() {
 
 list.forEach((item) => item.addEventListener('click', activeLink));
 
-function delayedScroll(target, delay) {
-    setTimeout(() => {
-        scrollToSection(target);
-    }, delay);
-}
-
-function scrollToSection(target) {
-    const section = document.querySelector(target);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
 
 function homePage() {
-    delayedScroll('#homePage', 200);
+    window.setTimeout(() => {
+        window.location.hash = 'homePage';
+    }, 600);
 }
 
 function projectPage() {
-    delayedScroll('#projects', 200);
+    window.setTimeout(() => {
+        window.location.hash = 'projects';
+    }, 600);
 }
 
+
 function aboutPage() {
-    delayedScroll('#aboutPage', 200);
+    window.setTimeout(() => {
+        window.location.hash = 'aboutPage';
+    }, 600);
 }
 
 function contactPage() {
-    delayedScroll('#contact', 200);
+    window.setTimeout(() => {
+        window.location.hash = 'contact';
+    }, 600);
 }
 
 function sendMail() {
@@ -42,8 +41,8 @@ function sendMail() {
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
     }
-    const serviceID = "service_t71w4cw";
-    const templateID = "template_2if9iod";
+    const serviceID = "service_ijcukgs";
+    const templateID = "template_aynqfom";
 
     emailjs.send(serviceID, templateID, params)
         .then(
@@ -56,3 +55,39 @@ function sendMail() {
             })
         .catch((err) => console.log(err));
 }
+
+const scrollLink = document.querySelectorAll('.linkScroll');
+scrollLink.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Function to update the navigation indicator based on the current section
+function updateIndicator() {
+    const sections = document.querySelectorAll('section');
+    const indicator = document.querySelector('.indicator');
+    const navLinks = document.querySelectorAll('.linkScroll');
+
+    sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top <= window.innerHeight) {
+            indicator.style.left = `${(index / sections.length) * 100}%`;
+
+            // Update the active class for the corresponding navigation link
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+            });
+            navLinks[index].classList.add('active');
+        }
+    });
+}
+
+// Event listener for the scroll event
+window.addEventListener('scroll', updateIndicator);
+;

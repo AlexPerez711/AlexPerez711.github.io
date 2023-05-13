@@ -12,25 +12,25 @@ list.forEach((item) => item.addEventListener('click', activeLink));
 
 function homePage() {
     setTimeout(() => {
-        window.location.replace('./Home_Page.html');
+        window.location.replace('#homePage');
     }, 200);
 }
 
 function projectPage() {
     setTimeout(() => {
-        window.location.replace('./Projects.html');
+        window.location.replace('#projects');
     }, 200);
 }
 
 function aboutPage() {
     setTimeout(() => {
-        window.location.replace('./About_Me.html');
+        window.location.replace('#aboutPage');
     }, 200);
 }
 
 function contactPage() {
     setTimeout(() => {
-        window.location.replace('./Contact.html');
+        window.location.replace('#contact');
     }, 200);
 }
 

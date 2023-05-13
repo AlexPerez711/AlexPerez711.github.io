@@ -15,7 +15,7 @@
 <div class="navigation">
     <ul>
         <li class="list active">
-            <a href="#homePage" onclick="delayedScroll('#homePage', 200)">
+            <a href="#homePage" onclick="homePage()" class="linkScroll">
                 <span class="icon">
                     <ion-icon name="home-outline"></ion-icon>
                 </span>
@@ -23,7 +23,7 @@
             </a>
         </li>
         <li class="list">
-            <a href="#aboutPage" onclick="delayedScroll('#aboutPage', 200)">
+            <a href="#aboutPage" onclick="aboutPage()" class="linkScroll">
                 <span class="icon">
                     <ion-icon name="person-circle-outline"></ion-icon>
                 </span>
@@ -31,7 +31,7 @@
             </a>
         </li>
         <li class="list">
-            <a href="#projects" onclick="delayedScroll('#projects', 200)">
+            <a href="#projects" onclick="projectPage()" class="linkScroll">
                 <span class="icon">
                     <ion-icon name="terminal-outline"></ion-icon>
                 </span>
@@ -39,7 +39,7 @@
             </a>
         </li>
         <li class="list">
-            <a href="#contact" onclick="delayedScroll('#contact', 200)">
+            <a href="#contact" onclick="contactPage()" class="linkScroll">
                 <span class="icon">
                     <ion-icon name="chatbubbles-outline"></ion-icon>
                 </span>
@@ -59,11 +59,12 @@
 </div>
 <div class="container">
     <section id="homePage">
-        <p class="glitch-text">
-            <span class="span-1"> {a} </span>
-            {a}
-            <span class="span-2"> {a} </span>
-        </p>
+        <h1 id="homeH1"> home </h1>
+        <!--        <p class="glitch-text">-->
+        <!--            <span class="span-1"> {a} </span>-->
+        <!--            {a}-->
+        <!--            <span class="span-2"> {a} </span>-->
+        <!--        </p>-->
     </section>
     <section id="aboutPage">
         <h1> About </h1>
@@ -74,6 +75,7 @@
     <section id="contact">
         <h1> contact </h1>
         <div class="emailForm">
+            <p>
             <form onsubmit="event.preventDefault(); sendMail();">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -83,9 +85,12 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit" id="emailSend">Send</button>
             </form>
+            </p>
         </div>
     </section>
 </div>
+<script src="js/portfolio.js"></script>
+<script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
