@@ -501,3 +501,26 @@ body .container section h1 {
 
 }
 
+                                                            /*light mode*/
+
+/* Light mode */
+.popup.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.popup.light-mode h2 {
+    color: #000;
+}
+
+.wrapper.light-mode .static-txt {
+    color: #000;
+}
+
+.dynamic-txts.light-mode li {
+    color: #000;
+}
+
+.dynamic-txts.light-mode li span {
+    color: #000;
+}

@@ -35,6 +35,7 @@ function contactPage() {
     }, 600);
 }
 
+
 function sendMail() {
     let params = {
         name: document.getElementById("name").value,
