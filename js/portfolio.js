@@ -69,25 +69,28 @@ scrollLink.forEach(link => {
 });
 
 // Function to update the navigation indicator based on the current section
-function updateIndicator() {
-    const sections = document.querySelectorAll('section');
-    const indicator = document.querySelector('.indicator');
-    const navLinks = document.querySelectorAll('.linkScroll');
 
-    sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight) {
-            indicator.style.left = `${(index / sections.length) * 100}%`;
+document.addEventListener('DOMContentLoaded', function() {
 
-            // Update the active class for the corresponding navigation link
-            navLinks.forEach((link) => {
-                link.classList.remove('active');
-            });
-            navLinks[index].classList.add('active');
-        }
-    });
-}
+    function updateIndicator() {
+        const sections = document.querySelectorAll('section');
+        const indicator = document.querySelector('.indicator');
+        const navLinks = document.querySelectorAll('.linkScroll');
 
-// Event listener for the scroll event
-window.addEventListener('scroll', updateIndicator);
-;
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight) {
+                indicator.style.left = `${(index / sections.length) * 100}%`;
+
+                // Update the active class for the corresponding navigation link
+                navLinks.forEach((link) => {
+                    link.classList.remove('active');
+                });
+                navLinks[index].classList.add('active');
+            }
+        });
+    }
+
+    // Event listener for the scroll event
+    window.addEventListener('scroll', updateIndicator);
+});
