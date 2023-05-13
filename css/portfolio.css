@@ -471,11 +471,11 @@ body .container section h1 {
     top: 0;
     animation: slide 8s steps(4) infinite;
 }
+
 @keyframes slide {
     100%{
         top: -360px;
     }
-
 }
 
 .dynamic-txts li span{
@@ -501,26 +501,26 @@ body .container section h1 {
 
 }
 
-                                                            /*light mode*/
+/*#projects {*/
+/*    text-align: center;*/
+/*}*/
 
-/* Light mode */
-.popup.light-mode {
-    background-color: #fff;
-    color: #000;
+#projectH1 {
+    margin-top: 100px;
+    font-size: 3em;
+    text-align: center
 }
 
-.popup.light-mode h2 {
-    color: #000;
-}
+/*.thumbnail-container {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*}*/
 
-.wrapper.light-mode .static-txt {
-    color: #000;
-}
-
-.dynamic-txts.light-mode li {
-    color: #000;
-}
-
-.dynamic-txts.light-mode li span {
-    color: #000;
+.thumbnail {
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    display: inline-block;
+    margin: 10px;
 }
