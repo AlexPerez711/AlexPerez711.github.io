@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const list = document.querySelectorAll('.list');
 
@@ -94,3 +94,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the scroll event
     window.addEventListener('scroll', updateIndicator);
 });
+
+// popup
+
+const settingsLink = document.querySelector('#settings-link');
+const closeButton = document.createElement('a');
+closeButton.href = "#";
+closeButton.id = "closeButton";
+closeButton.textContent = "Close";
+closeButton.addEventListener('click', hidePopup);
+
+settingsLink.addEventListener('click', showPopup);
+
+function showPopup(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup-content');
+    popupContent.innerHTML = `
+        <h2>Settings</h2>
+        <p>This is the settings popup.</p>
+    `;
+    popupContent.appendChild(closeButton);
+    popup.appendChild(popupContent);
+    document.body.appendChild(popup);
+}
+
+function hidePopup() {
+    const popup = document.querySelector('.popup');
+    if (popup) {
+        popup.remove();
+    }
+}
+

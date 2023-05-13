@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
 }
-                                                /*navbar*/
+
+/*navbar*/
 .navigation {
     position: fixed;
     bottom: 0;
@@ -134,7 +135,7 @@
     transform: translateX(calc(70px * 4));
 }
 
-                                            /*scrolling pages*/
+/*scrolling pages*/
 body {
     background: black;
     color: white;
@@ -176,16 +177,28 @@ body .container section:nth-of-type(1) {
 
 body .container section:nth-of-type(2) {
     background-color: #070707;
+    background-image: url("../img/{A} smoll.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 
 body .container section:nth-of-type(3) {
     background-color: #000000;
+    background-image: url("../img/{A} smoll.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 
 body .container section:nth-of-type(4) {
     background-color: #070707;
+    background-image: url("../img/{A} smoll.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
 }
 
@@ -256,7 +269,7 @@ body .container section h1 {
 /*    }*/
 /*}*/
 
-                                                /*email form*/
+/*email form*/
 .emailForm {
     flex-grow: 3;
     display: flex;
@@ -326,11 +339,12 @@ body .container section h1 {
 }
 
 
-#homeH1{
+#homeH1 {
 
     margin-top: 300px;
     font-size: large;
 }
+
 .flex-about {
     display: flex;
     flex-wrap: wrap;
@@ -353,10 +367,23 @@ body .container section h1 {
     margin-left: 15%;
     font-size: 50px;
     /*width: 900px;*/
-
 }
 
-#aboutP{
+#linkedinAbout {
+    font-size: 30px;
+    justify-content: center;
+    text-decoration: none;
+    color: #0a66c2;
+}
+
+#githubAbout {
+    font-size: 30px;
+    justify-content: center;
+    text-decoration: none;
+    color: #f0f6fc;
+}
+
+#aboutP {
     margin-left: 200px;
     width: 900px;
 }
@@ -365,6 +392,112 @@ body .container section h1 {
     align-self: flex-end;
     margin-top: 200px;
     margin-right: 200px;
+    border-radius: 20%;
 }
 
+.popup {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 50px 30px;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+    border-top-color: rgba(225, 225, 225, 0.5);
+    border-left-color: rgba(225, 225, 225, 0.5);
+    border-bottom-color: rgba(225, 225, 225, 0.1);
+    border-right-color: rgba(225, 225, 225, 0.1);
+    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.3));
+    text-align: left;
+}
+
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.popup #closeButton {
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 2px;
+    overflow: hidden;
+
+}
+
+.popup #closeButton:hover {
+    background-color: #999;
+}
+
+.wrapper{
+    display: inline-flex;
+}
+
+.wrapper .static-txt{
+    margin-top: 200px;
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+    margin-top: 200px;
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.dynamic-txts li{
+    color: #52e3fb;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+
+}
+
+.dynamic-txts li span{
+    position: relative;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-left: 2px solid #52e3fb;
+    animation: typing 2s steps(11) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+
+}
 
