@@ -345,53 +345,53 @@ body .container section h1 {
     font-size: large;
 }
 
-.flex-about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+/*.flex-about {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.flex-content {
-    margin-right: 0;
-    margin-top: 17%;
-    width: calc(60% - 10px);
-    /*flex-basis: calc(70% - 10px); !* Adjust the width of the content section *!*/
-}
+/*.flex-content {*/
+/*    margin-right: 0;*/
+/*    margin-top: 17%;*/
+/*    width: calc(60% - 10px);*/
+/*    !*flex-basis: calc(70% - 10px); !* Adjust the width of the content section *!*!*/
+/*}*/
 
 .flex-pic {
-    width: 40%; /* Adjust the width of the image section */
-    margin-right: auto;
+    /*width: 40%; !* Adjust the width of the image section *!*/
+    /*margin-right: auto;*/
 }
 
 #aboutH1 {
-    margin-left: 15%;
+    /*margin-left: 15%;*/
     font-size: 50px;
     /*width: 900px;*/
 }
 
-#linkedinAbout {
-    font-size: 30px;
-    justify-content: center;
-    text-decoration: none;
-    color: #0a66c2;
-}
+/*#linkedinAbout {*/
+/*    font-size: 30px;*/
+/*    justify-content: center;*/
+/*    text-decoration: none;*/
+/*    color: #0a66c2;*/
+/*}*/
 
-#githubAbout {
-    font-size: 30px;
-    justify-content: center;
-    text-decoration: none;
-    color: #f0f6fc;
-}
+/*#githubAbout {*/
+/*    font-size: 30px;*/
+/*    justify-content: center;*/
+/*    text-decoration: none;*/
+/*    color: #f0f6fc;*/
+/*}*/
 
-#aboutP {
-    margin-left: 200px;
-    width: 900px;
-}
+/*#aboutP {*/
+/*    margin-left: 200px;*/
+/*    width: 900px;*/
+/*}*/
 
 #Headshot {
-    align-self: flex-end;
-    margin-top: 200px;
-    margin-right: 200px;
+    /*align-self: flex-end;*/
+    /*margin-top: 200px;*/
+    /*margin-right: 200px;*/
     border-radius: 20%;
 }
 
