@@ -70,25 +70,29 @@
         </div>
     </section>
     <section id="aboutPage" class="flex-about">
-<!--        <div class="flex-content">-->
-            <div class="row">
-                    <h1 class="col-8" id="aboutH1">About Me</h1>
-                        <p class="col-8" id="aboutP">
-                            Full-Stack Software Developer with a diverse set of skills gained from my previous experiences in the United States Navy. My background includes leadership, administrative duties, personnel administration, and legal proceedings. I am experienced in providing counseling and information to personnel, conducting job training, and effectively supervising and managing teams in high-pressure situations. Overall, my diverse skill set makes me a valuable asset in any Full Stack Software Developer role.
-                        </p>
-                        <div class="col-8" id="socialLinks" >
-                            <a href="https://github.com/AlexPerez711" id="githubAbout">
-                                <ion-icon name="logo-github"></ion-icon>
-                            </a>
-                            <a href="https://www.linkedin.com/in/alexfernandoperez/" id="linkedinAbout">
-                                <ion-icon name="logo-linkedin"></ion-icon>
-                            </a>
-                        </div>
-                    <div class="col-4 flex-pic">
-                        <img src="img/MugShot-Temp.png" alt="temp pic" id="Headshot">
-                    </div>
+        <!--        <div class="flex-content">-->
+        <div class="row">
+            <h1 class="col-8" id="aboutH1">About Me</h1>
+            <p class="col-8" id="aboutP">
+                Full-Stack Software Developer with a diverse set of skills gained from my previous experiences in the
+                United States Navy. My background includes leadership, administrative duties, personnel administration,
+                and legal proceedings. I am experienced in providing counseling and information to personnel, conducting
+                job training, and effectively supervising and managing teams in high-pressure situations. Overall, my
+                diverse skill set makes me a valuable asset in any Full Stack Software Developer role.
+            </p>
+            <div class="col-8" id="socialLinks">
+                <a href="https://github.com/AlexPerez711" id="githubAbout">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/alexfernandoperez/" id="linkedinAbout">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
             </div>
-<!--        </div>-->
+            <div class="col-4 flex-pic">
+                <img src="img/MugShot-Temp.png" alt="temp pic" id="Headshot">
+            </div>
+        </div>
+        <!--        </div>-->
     </section>
     <section id="projects">
         <div class="row">
@@ -97,14 +101,61 @@
             </div>
             <br>
             <div class="col-6">
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
+                <div class="thumbnail">
+                    <iframe id="coffeeVid"
+                            src="https://drive.google.com/file/d/1mRiXJsdZrjXXshp_SxodE17jDsoSMDBr/preview" width="640"
+                            height="480" allow="autoplay"></iframe>
+                    <p id="coffeeText">Coffee Project<a
+                            href="https://github.com/Harris-Perez-Coffee-Project/coffee-project" id="githubCoffee"
+                            target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
+                <div class="thumbnail">
+                    <iframe id="weatherVid"
+                            src="https://drive.google.com/file/d/1w58PBB_-SjLHq-CTNRdOuRbddCs8HvrE/preview" width="640"
+                            height="480" allow="autoplay"></iframe>
+                    <p id="weather">Weather App<a
+                            href="https://github.com/AlexPerez711/codeup-web-exercises/blob/main/weather_map.html"
+                            id="githubweather" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
+                <div class="thumbnail">
+                    <iframe id="movieVid" src="https://drive.google.com/file/d/1QMwnXxUYCtmWj9YmBMBOrTseb5IckTNg/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p id="moviesText">Movies Project <a
+                            href="https://github.com/Yong-Perez-Saunders-Movie-Project/movies-application"
+                            id="githubMovie" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
             </div>
+            <br>
             <div class="col-6">
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
-                <div class="thumbnail"></div>
+                <div class="thumbnail">
+                    <iframe id="contactsManagerVid"
+                            src="https://drive.google.com/file/d/11fxRWa31mMcDjApPa74-l4b_Gh1dBl12/preview" width="640"
+                            height="480" allow="autoplay"></iframe>
+                    <p id="contactsManager">Contacts Manager<a
+                            href="https://github.com/Harris-Olson-Perez-Contacts-Manager/Contacts-Manager" id="githubCM"
+                            target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://t3.ftcdn.net/jpg/00/99/82/88/360_F_99828865_lW5dIHE9e4NCI8Lb5XaY4wL5CL32hiAI.jpg"
+                         class="comingSoon">
+                    <p id="adLister">Ad Lister Project<a href="#" id="githubAd" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
+                <div class="thumbnail">
+                    <img src="https://t3.ftcdn.net/jpg/00/99/82/88/360_F_99828865_lW5dIHE9e4NCI8Lb5XaY4wL5CL32hiAI.jpg"
+                         class="comingSoon">
+                    <p id="capstone">Capstone<a href="#" id="githubCapstone" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -128,7 +179,5 @@
 <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
 <script src="js/portfolio.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
-
 </body>
 </html>

@@ -1,41 +1,30 @@
 'use strict';
-
 const list = document.querySelectorAll('.list');
-
 function activeLink() {
     list.forEach((item) => item.classList.remove('active'));
     this.classList.add('active');
 }
-
 list.forEach((item) => item.addEventListener('click', activeLink));
-
-
 function homePage() {
     window.setTimeout(() => {
         window.location.hash = 'homePage';
     }, 600);
 }
-
 function projectPage() {
     window.setTimeout(() => {
         window.location.hash = 'projects';
     }, 600);
 }
-
-
 function aboutPage() {
     window.setTimeout(() => {
         window.location.hash = 'aboutPage';
     }, 600);
 }
-
 function contactPage() {
     window.setTimeout(() => {
         window.location.hash = 'contact';
     }, 600);
 }
-
-
 function sendMail() {
     let params = {
         name: document.getElementById("name").value,
@@ -44,7 +33,6 @@ function sendMail() {
     }
     const serviceID = "service_ijcukgs";
     const templateID = "template_aynqfom";
-
     emailjs.send(serviceID, templateID, params)
         .then(
             res => {
@@ -56,7 +44,6 @@ function sendMail() {
             })
         .catch((err) => console.log(err));
 }
-
 const scrollLink = document.querySelectorAll('.linkScroll');
 scrollLink.forEach(link => {
     link.addEventListener('click', e => {
@@ -68,21 +55,16 @@ scrollLink.forEach(link => {
         });
     });
 });
-
 // Function to update the navigation indicator based on the current section
-
 document.addEventListener('DOMContentLoaded', function() {
-
     function updateIndicator() {
         const sections = document.querySelectorAll('section');
         const indicator = document.querySelector('.indicator');
         const navLinks = document.querySelectorAll('.linkScroll');
-
         sections.forEach((section, index) => {
             const rect = section.getBoundingClientRect();
             if (rect.top >= 0 && rect.top <= window.innerHeight) {
                 indicator.style.left = `${(index / sections.length) * 100}%`;
-
                 // Update the active class for the corresponding navigation link
                 navLinks.forEach((link) => {
                     link.classList.remove('active');
@@ -91,25 +73,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
     // Event listener for the scroll event
     window.addEventListener('scroll', updateIndicator);
 });
-
 // popup
-
 const settingsLink = document.querySelector('#settings-link');
 const closeButton = document.createElement('a');
 closeButton.href = "#";
 closeButton.id = "closeButton";
 closeButton.textContent = "Close";
 closeButton.addEventListener('click', hidePopup);
-
 settingsLink.addEventListener('click', showPopup);
-
 function showPopup(event) {
     event.preventDefault(); // Prevent the default link behavior
-
     const popup = document.createElement('div');
     popup.classList.add('popup');
     const popupContent = document.createElement('div');
@@ -122,11 +98,9 @@ function showPopup(event) {
     popup.appendChild(popupContent);
     document.body.appendChild(popup);
 }
-
 function hidePopup() {
     const popup = document.querySelector('.popup');
     if (popup) {
         popup.remove();
     }
 }
-
