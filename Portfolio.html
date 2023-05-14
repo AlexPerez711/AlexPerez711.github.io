@@ -64,7 +64,8 @@
         <div class="indicator"></div>
     </ul>
 </div>
-<div class="container">
+
+<div class="container" id="container">
     <section id="homePage">
         <div class="wrapper">
             <div class="static-txt"> Hi! I'm</div>
@@ -150,15 +151,13 @@
                     </a></p>
                 </div>
                 <div class="thumbnail">
-                    <img src="https://t3.ftcdn.net/jpg/00/99/82/88/360_F_99828865_lW5dIHE9e4NCI8Lb5XaY4wL5CL32hiAI.jpg"
-                         class="comingSoon">
+                    <img src="img/comingSoon.png" class="comingSoon">
                     <p id="adLister">Ad Lister Project<a href="#" id="githubAd" target="_blank">
                         <ion-icon name="logo-github"></ion-icon>
                     </a></p>
                 </div>
                 <div class="thumbnail">
-                    <img src="https://t3.ftcdn.net/jpg/00/99/82/88/360_F_99828865_lW5dIHE9e4NCI8Lb5XaY4wL5CL32hiAI.jpg"
-                         class="comingSoon">
+                    <img src="img/comingSoon.png" class="comingSoon">
                     <p id="capstone">Capstone<a href="#" id="githubCapstone" target="_blank">
                         <ion-icon name="logo-github"></ion-icon>
                     </a></p>
@@ -186,5 +185,32 @@
 </div>
 <script src="js/portfolio.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<!--<script>-->
+<!--    const element = document.getElementById('container');-->
+<!--    let lastScrollPosition = 0;-->
+<!--    let scrollTimeout;-->
+
+<!--    element.addEventListener('scroll', () => {-->
+<!--        clearTimeout(scrollTimeout);-->
+<!--        const currentScrollPosition = element.scrollLeft;-->
+<!--        if (currentScrollPosition !== lastScrollPosition){-->
+<!--            scrollTimeout = setTimeout(() => {-->
+<!--                console.log("snap Scroll has ended.");-->
+<!--                const currentId = getCurrentSection();-->
+<!--                const currentLink = document.querySelector(`a[href="#${currentId}"]`);-->
+<!--                const otherLinks = document.querySelectorAll('a.active[href^="#"]:not([href="#active"])');-->
+<!--                otherLinks.forEach(link => {-->
+<!--                    if (link !== currentLink){-->
+<!--                        link.classList.remove('active');-->
+<!--                    }-->
+<!--                })-->
+<!--                if(currentLink){-->
+<!--                    currentLink.classList.add('active');-->
+<!--                }-->
+<!--            }, 300)-->
+<!--        }-->
+<!--    })-->
+
+<!--</script>-->
 </body>
 </html>
