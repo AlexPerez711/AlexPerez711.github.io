@@ -25,25 +25,7 @@ function contactPage() {
         window.location.hash = 'contact';
     }, 600);
 }
-function sendMail() {
-    let params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-    }
-    const serviceID = "service_ijcukgs";
-    const templateID = "template_aynqfom";
-    emailjs.send(serviceID, templateID, params)
-        .then(
-            res => {
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("message").value = "";
-                console.log(res);
-                alert("Your message was sent successfully :)");
-            })
-        .catch((err) => console.log(err));
-}
+
 const scrollLink = document.querySelectorAll('.linkScroll');
 scrollLink.forEach(link => {
     link.addEventListener('click', e => {
@@ -76,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for the scroll event
     window.addEventListener('scroll', updateIndicator);
 });
+
 // popup
 const settingsLink = document.querySelector('#settings-link');
 const closeButton = document.createElement('a');
@@ -104,3 +87,28 @@ function hidePopup() {
         popup.remove();
     }
 }
+
+function sendMail() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert("Please fill in all the fields before sending the message.");
+        return;
+    }
+
+    let params = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    emailjs.send("service_5e4d0kk", "template_2if9iod", params).then(function(response) {
+        alert("Message successfully sent! " + response.status);
+    }, function(error) {
+        alert("Failed to send message. Please try again later. Error: " + error);
+    });
+}
+
+

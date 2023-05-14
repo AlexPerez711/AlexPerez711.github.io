@@ -10,6 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/portfolio.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('tmXNpWLCwle4UT6wi');
+        })();
+    </script>
 </head>
 <body>
 <div class="navigation">
@@ -70,7 +77,6 @@
         </div>
     </section>
     <section id="aboutPage" class="flex-about">
-        <!--        <div class="flex-content">-->
         <div class="row">
             <h1 class="col-8" id="aboutH1">About Me</h1>
             <p class="col-8" id="aboutP">
@@ -92,7 +98,6 @@
                 <img src="img/MugShot-Temp.png" alt="temp pic" id="Headshot">
             </div>
         </div>
-        <!--        </div>-->
     </section>
     <section id="projects">
         <div class="row">
@@ -161,30 +166,24 @@
             </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="row">
-            <div class="col-5">
-                <h1 id="contactH1"> Contact </h1>
-            </div>
-            <div class="col-7">
-                <div class="emailForm">
-                    <p>
-                    <form onsubmit="event.preventDefault(); sendMail();">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                        <button type="submit" id="emailSend">Send</button>
-                    </form>
-                    </p>
-                </div>
+    <section class="row" id="contact">
+        <div class="col-6">
+            <h1 id="contactH1" class="col-12"> Contact </h1>
+        </div>
+        <div class="col">
+            <div class="emailForm">
+                <p>
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Name" Required/></br>
+                    <input type="email" id="email" placeholder="E-Mail" Required/></br>
+                    <textarea id="message" placeholder="Message" Required></textarea>
+                    <button id="emailSend" onclick="sendMail()">Send</button>
+                </form>
+                </p>
             </div>
         </div>
     </section>
 </div>
-<script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
 <script src="js/portfolio.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
