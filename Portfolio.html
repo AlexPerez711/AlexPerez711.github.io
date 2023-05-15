@@ -19,6 +19,7 @@
     </script>
 </head>
 <body>
+<!--NAV BAR-->
 <div class="navigation">
     <ul>
         <li class="list active">
@@ -64,7 +65,7 @@
         <div class="indicator"></div>
     </ul>
 </div>
-
+<!--HOME PAGE-->
 <div class="container" id="container">
     <section id="homePage">
         <div class="wrapper">
@@ -77,6 +78,7 @@
             </ul>
         </div>
     </section>
+    <!--    ABOUT PAGE-->
     <section id="aboutPage" class="flex-about">
         <div class="row">
             <h1 class="col-8" id="aboutH1">About Me</h1>
@@ -88,10 +90,10 @@
                 diverse skill set makes me a valuable asset in any Full Stack Software Developer role.
             </p>
             <div class="col-8" id="socialLinks">
-                <a href="https://github.com/AlexPerez711" id="githubAbout">
+                <a href="https://github.com/AlexPerez711" id="githubAbout" target="_blank">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
-                <a href="https://www.linkedin.com/in/alexfernandoperez/" id="linkedinAbout">
+                <a href="https://www.linkedin.com/in/alexfernandoperez/" id="linkedinAbout" target="_blank">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
             </div>
@@ -100,6 +102,7 @@
             </div>
         </div>
     </section>
+    <!--    PROJECTS PAGE-->
     <section id="projects">
         <div class="row">
             <div class="col-12">
@@ -165,9 +168,34 @@
             </div>
         </div>
     </section>
+    <!--    CONTACT PAGE-->
     <section class="row" id="contact">
         <div class="col-6">
-            <h1 id="contactH1" class="col-12"> Contact </h1>
+            <h1 id="contactH1" class="col"> Contact Me</h1>
+            <br>
+            <div>
+                <p id="contactP">
+                    Hello there! Whether you're looking to explore job opportunities, collaborate on an exciting
+                    project, or simply want to connect, feel free to send me a message. I'm always open to new
+                    possibilities and eager to hear from you. Rest assured that I personally respond to all messages
+                    within one business day. Your inquiry is
+                    important to me, and I'll make sure to address it promptly. I look forward to hearing from you!
+                    <br>
+                    Best regards,
+                    Alex</p>
+                <p><a id="githubCMLink" href="https://github.com/AlexPerez711" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a> - GitHub
+                </p>
+                <p><a id="linkedinCM" href="https://www.linkedin.com/in/alexfernandoperez/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a> - LinkedIn
+                </p>
+                <p><a id="resumeCM" href="pdf/Alex%20Perez.pdf" download>
+                    <ion-icon name="document-outline" target="_blank"></ion-icon>
+                </a> - Resume
+                </p>
+            </div>
         </div>
         <div class="col">
             <div class="emailForm">
@@ -176,6 +204,7 @@
                     <input type="text" id="name" placeholder="Name" Required/></br>
                     <input type="email" id="email" placeholder="E-Mail" Required/></br>
                     <textarea id="message" placeholder="Message" Required></textarea>
+                    <br>
                     <button id="emailSend" onclick="sendMail()">Send</button>
                 </form>
                 </p>
@@ -185,32 +214,5 @@
 </div>
 <script src="js/portfolio.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<!--<script>-->
-<!--    const element = document.getElementById('container');-->
-<!--    let lastScrollPosition = 0;-->
-<!--    let scrollTimeout;-->
-
-<!--    element.addEventListener('scroll', () => {-->
-<!--        clearTimeout(scrollTimeout);-->
-<!--        const currentScrollPosition = element.scrollLeft;-->
-<!--        if (currentScrollPosition !== lastScrollPosition){-->
-<!--            scrollTimeout = setTimeout(() => {-->
-<!--                console.log("snap Scroll has ended.");-->
-<!--                const currentId = getCurrentSection();-->
-<!--                const currentLink = document.querySelector(`a[href="#${currentId}"]`);-->
-<!--                const otherLinks = document.querySelectorAll('a.active[href^="#"]:not([href="#active"])');-->
-<!--                otherLinks.forEach(link => {-->
-<!--                    if (link !== currentLink){-->
-<!--                        link.classList.remove('active');-->
-<!--                    }-->
-<!--                })-->
-<!--                if(currentLink){-->
-<!--                    currentLink.classList.add('active');-->
-<!--                }-->
-<!--            }, 300)-->
-<!--        }-->
-<!--    })-->
-
-<!--</script>-->
 </body>
 </html>

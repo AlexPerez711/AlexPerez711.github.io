@@ -452,16 +452,52 @@ body .container section h1 {
 }
 
 #contactH1 {
-    margin-top: 20px;
+    margin-top: 20%;
+    margin-left: 15%;
     text-align: left;
-    font-size: xxx-large;
+    font-size: 80px;
+}
+
+#linkedinCM {
+    font-size: 30px;
+    justify-content: left;
+    text-decoration: none;
+    color: #0a66c2;
+    /*margin-left: 50px;*/
+
+}
+
+#githubCMLink{
+    font-size: 30px;
+    justify-content: left;
+    text-decoration: none;
+    color: white;
+    /*margin-left: 50px;*/
+
+}
+
+#resumeCM{
+    font-size: 30px;
+    justify-content: left;
+    text-decoration: none;
+    color: white;
+    /*margin-left: 50px;*/
+;
+}
+
+#contactP{
+    height: 200px;
+    width: 600px;
 }
 
 .emailForm {
     /*text-align: right;*/
     padding: 20px 10px;
-    height: 40%;
-    width: 100%;
+    margin-top: 20%;
+    margin-right: 200px;
+    /*margin-right: 60%;*/
+    height: 500px;
+    width: 500px;
     color: black;
     border-radius: 1rem;
     border: 1px solid transparent;
@@ -485,6 +521,10 @@ body .container section h1 {
     text-align: left;
 }
 
+#message{
+    height: 250px;
+}
+
 .emailForm input,
 .emailForm textarea {
     padding: 10px;
@@ -501,8 +541,18 @@ body .container section h1 {
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 40px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     font-size: 18px;
     letter-spacing: 2px;
     overflow: hidden;
+    width: 30%;
+    margin-left: 35%;
 }
+
+#resumeLink {
+    font-size: 20px;
+    justify-content: center;
+    text-decoration: none;
+    color: #f0f6fc;
+}
+
