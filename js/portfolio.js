@@ -40,34 +40,35 @@ function getCurrentSection() {
 }
 
 // popup
-const settingsLink = document.querySelector('#settings-link');
-const closeButton = document.createElement('a');
-closeButton.href = "#";
-closeButton.id = "closeButton";
-closeButton.textContent = "Close";
-closeButton.addEventListener('click', hidePopup);
-settingsLink.addEventListener('click', showPopup);
-function showPopup(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    const popup = document.createElement('div');
-    popup.classList.add('popup');
-    const popupContent = document.createElement('div');
-    popupContent.classList.add('popup-content');
-    popupContent.innerHTML = `
-        <h2>Settings</h2>
-        <p>This is the settings popup.</p>
-    `;
-    popupContent.appendChild(closeButton);
-    popup.appendChild(popupContent);
-    document.body.appendChild(popup);
-}
-function hidePopup() {
-    const popup = document.querySelector('.popup');
-    if (popup) {
-        popup.remove();
-    }
-}
+// const settingsLink = document.querySelector('#settings-link');
+// const closeButton = document.createElement('a');
+// closeButton.href = "#";
+// closeButton.id = "closeButton";
+// closeButton.textContent = "Close";
+// closeButton.addEventListener('click', hidePopup);
+// settingsLink.addEventListener('click', showPopup);
+// function showPopup(event) {
+//     event.preventDefault(); // Prevent the default link behavior
+//     const popup = document.createElement('div');
+//     popup.classList.add('popup');
+//     const popupContent = document.createElement('div');
+//     popupContent.classList.add('popup-content');
+//     popupContent.innerHTML = `
+//         <h2>Settings</h2>
+//         <p>This is the settings popup.</p>
+//     `;
+//     popupContent.appendChild(closeButton);
+//     popup.appendChild(popupContent);
+//     document.body.appendChild(popup);
+// }
+// function hidePopup() {
+//     const popup = document.querySelector('.popup');
+//     if (popup) {
+//         popup.remove();
+//     }
+// }
 
+// ---------------------------------------------------------EMAIL
 function sendMail() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -91,4 +92,15 @@ function sendMail() {
     });
 }
 
+
+// Toggle between light mode and dark mode
+function toggleMode() {
+    const body = document.querySelector('body');
+    body.classList.toggle('light-mode');
+    body.classList.toggle('dark-mode');
+}
+
+// Example usage: Call toggleMode() when the theme button is clicked
+const themeButton = document.querySelector('#theme');
+themeButton.addEventListener('click', toggleMode);
 
