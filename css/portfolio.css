@@ -267,14 +267,14 @@ body .container section h1 {
 }
 
 .wrapper .static-txt {
-    margin-top: 200px;
+    margin-top: 20%;
     color: white;
     font-size: 60px;
     font-weight: 400;
 }
 
 .wrapper .dynamic-txts {
-    margin-top: 200px;
+    margin-top: 20%;
     margin-left: 15px;
     height: 90px;
     line-height: 90px;
