@@ -332,7 +332,7 @@ body .container section h1 {
 }
 
 #aboutH1 {
-    margin-right: 38%;
+    margin-right: 30%;
     font-size: 50px;
     width: 50%;
     height: 60px;
@@ -342,7 +342,7 @@ body .container section h1 {
 
 #aboutP {
     /*flex-flow: column;*/
-    width: 35%;
+    width: 45%;
     margin-left: 10%;
     /*margin-bottom: 20%;*/
     margin-top: 5%;
