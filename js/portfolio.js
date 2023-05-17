@@ -101,6 +101,6 @@ function toggleMode() {
 }
 
 // Example usage: Call toggleMode() when the theme button is clicked
-const themeButton = document.querySelector('#theme');
-themeButton.addEventListener('click', toggleMode);
+const liteButton = document.querySelector('#lite');
+liteButton.addEventListener('click', toggleMode);
 

@@ -61,6 +61,16 @@
     line-height: 75px;
     font-size: 1.5em;
     text-align: center;
+    color: white;
+    transition: transform 0.5s;
+}
+
+.light-mode .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
     color: black;
     transition: transform 0.5s;
 }
@@ -70,6 +80,17 @@
 }
 
 .navigation ul li a .text {
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.light-mode .navigation ul li a .text {
     position: absolute;
     color: black;
     font-weight: 700;
@@ -120,6 +141,44 @@
     border-top-left-radius: 20px;
     box-shadow: -1px -10px 0 0 black;
 }
+
+/*light mode*/
+.light-mode .indicator {
+    position: absolute;
+    top: -80%;
+    width: 50px;
+    height: 50px;
+    background: salmon;
+    border-radius: 50%;
+    border: 6px solid #5ce1e6;
+    transition: 0.5s;
+    margin-right: 280px;
+}
+
+.light-mode .indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #5ce1e6;
+}
+
+.light-mode .indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 #5ce1e6;
+}
+
 
 .navigation ul li:nth-child(1).active ~ .indicator {
     transform: translateX(calc(70px * 0));
@@ -181,6 +240,30 @@
 
 #pdfSB {
     color: white;
+}
+
+
+.light-mode .sidebar ul li {
+    list-style: none;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.light-mode #emailSB {
+    color: black;
+}
+
+.light-mode #linkedinSB {
+    color: #0a66c2;
+}
+
+.light-mode #githubSB {
+    color: black;
+}
+
+.light-mode #pdfSB {
+    color: black;
 }
 
 /*scrolling pages*/
@@ -247,7 +330,43 @@ body .container section:nth-of-type(4) {
     background-size: cover;
     color: white;
 }
+/*LIGHT MODE*/
 
+body.light-mode .container section:nth-of-type(1) {
+    background-color: #000000;
+    background-image: url("../img/{A}white.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+body.light-mode .container section:nth-of-type(2) {
+    background-color: #070707;
+    background-image: url("../img/{A}smollwhite.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+body.light-mode .container section:nth-of-type(3) {
+    background-color: #000000;
+    background-image: url("../img/{A}smollwhite.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+body.light-mode .container section:nth-of-type(4) {
+    background-color: #070707;
+    background-image: url("../img/{A}smollwhite.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
 body .container section h1 {
     font-family: Arial, "High Tower Text", sans-serif;
     /*font-size: 15em;*/
@@ -273,6 +392,14 @@ body .container section h1 {
     font-weight: 400;
 }
 
+/*LIGHT MODE*/
+.light-mode .wrapper .static-txt {
+    margin-top: 20%;
+    color: black;
+    font-size: 60px;
+    font-weight: 400;
+}
+
 .wrapper .dynamic-txts {
     margin-top: 20%;
     margin-left: 15px;
@@ -284,6 +411,17 @@ body .container section h1 {
 
 .dynamic-txts li {
     color: #52e3fb;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+}
+
+/*LIGHT MODE*/
+.light-mode .dynamic-txts li {
+    color: salmon;
     list-style: none;
     font-size: 60px;
     font-weight: 500;
@@ -312,6 +450,19 @@ body .container section h1 {
     border-left: 2px solid #52e3fb;
     animation: typing 2s steps(11) infinite;
 }
+
+/*LIGHT MODE*/
+.light-mode .dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:  #5ce1e6;
+    border-left: 2px solid salmon;
+    animation: typing 2s steps(11) infinite;
+}
+
 
 @keyframes typing {
     100% {
@@ -361,64 +512,64 @@ body .container section h1 {
 
 /*Settings Popup*/
 
-.popup {
-    position: fixed;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
-    padding: 50px 30px;
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
-    border-top-color: rgba(225, 225, 225, 0.5);
-    border-left-color: rgba(225, 225, 225, 0.5);
-    border-bottom-color: rgba(225, 225, 225, 0.1);
-    border-right-color: rgba(225, 225, 225, 0.1);
-    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.3));
-    text-align: left;
-}
+/*.popup {*/
+/*    position: fixed;*/
+/*    top: 75%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    background-color: black;*/
+/*    padding: 50px 30px;*/
+/*    border-radius: 1rem;*/
+/*    border: 1px solid transparent;*/
+/*    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);*/
+/*    border-top-color: rgba(225, 225, 225, 0.5);*/
+/*    border-left-color: rgba(225, 225, 225, 0.5);*/
+/*    border-bottom-color: rgba(225, 225, 225, 0.1);*/
+/*    border-right-color: rgba(225, 225, 225, 0.1);*/
+/*    background: linear-gradient(to right bottom, rgba(225, 225, 225, 0.5), rgba(225, 225, 225, 0.3));*/
+/*    text-align: left;*/
+/*}*/
 
-.popup h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+/*.popup h2 {*/
+/*    font-size: 24px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
-.popup p {
-    margin-bottom: 20px;
-}
+/*.popup p {*/
+/*    margin-bottom: 20px;*/
+/*}*/
 
-.popup #closeButton {
-    position: relative;
-    display: inline-block;
-    padding: 12px 36px;
-    background: linear-gradient(90deg, #0162c8, #55e7fc);
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 18px;
-    letter-spacing: 2px;
-    overflow: hidden;
-}
+/*.popup #closeButton {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    padding: 12px 36px;*/
+/*    background: linear-gradient(90deg, #0162c8, #55e7fc);*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    border-radius: 40px;*/
+/*    cursor: pointer;*/
+/*    font-size: 18px;*/
+/*    letter-spacing: 2px;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.popup #closeButton:hover {
-    background-color: #999;
-}
+/*.popup #closeButton:hover {*/
+/*    background-color: #999;*/
+/*}*/
 
 /*projects page*/
 
 #projectH1 {
     margin-top: 50px;
     font-size: 3em;
-    text-align: center
+    text-align: center;
 }
 
 .thumbnail {
     width: 300px;
     height: 200px;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     display: inline-block;
     margin: 10px;
     border-radius: 4px;
@@ -430,28 +581,94 @@ body .container section h1 {
     height: 200px;
 }
 
-#moviesText {
-    color: white;
+#moviesText{
+    font-size: 20px;
+    font-weight: bold;
+}
+#coffeeText {
+    font-size: 20px;
+    font-weight: bold;
+}
+#weather{
+    font-size: 20px;
+    font-weight: bold;
+}
+#moviesText{
+    font-size: 20px;
+    font-weight: bold;
+}
+#contactsManager{
+    font-size: 20px;
+    font-weight: bold;
+}
+#adLister {
+    font-size: 20px;
+    font-weight: bold;
+}
+#capstone {
+    font-size: 20px;
+    font-weight: bold;
+}
+/*light*/
+.light-mode #moviesText{
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #coffeeText {
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #weather{
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #moviesText{
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #contactsManager{
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #adLister {
+    font-size: 20px;
+    font-weight: bold;
+}
+.light-mode #capstone {
+    font-size: 20px;
+    font-weight: bold;
 }
 
+
 #githubMovie {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
+}
+
+.light-mode #githubMovie {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
 }
 
 #coffeeVid {
     padding-bottom: 7px;
     width: 300px;
     height: 200px;
+    font-size: 25px;
 }
 
 #githubCoffee {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
+}
+
+.light-mode #githubCoffee {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
 }
 
 #contactsManagerVid {
@@ -461,10 +678,15 @@ body .container section h1 {
 }
 
 #githubCM {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
+}
+
+.light-mode #githubCM {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
 }
 
 #weatherVid {
@@ -474,10 +696,15 @@ body .container section h1 {
 }
 
 #githubweather {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
+}
+
+.light-mode #githubweather {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
 }
 
 .comingSoon {
@@ -487,19 +714,28 @@ body .container section h1 {
 }
 
 #githubAd {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
 }
 
 #githubCapstone {
-    font-size: 20px;
     justify-content: center;
     text-decoration: none;
     color: #f0f6fc;
 }
 
+.light-mode #githubAd {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+.light-mode #githubCapstone {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
 /*contact page*/
 
 #contact {
@@ -554,12 +790,31 @@ body .container section h1 {
 
 #message {
     height: 250px;
+    border-color: #55e7fc;
+}
+
+.light-mode #message {
+    height: 250px;
+    border-color: salmon;
 }
 
 .emailForm input,
 .emailForm textarea {
     padding: 10px;
-    margin: 4px 0;
+    margin: 4px 20px;
+    border-color: #55e7fc;
+    border-width: medium;
+    border-radius: 15px;
+    /*resize: vertical;*/
+}
+
+.light-mode .emailForm input,
+.emailForm textarea {
+    padding: 10px;
+    margin: 4px 20px;
+    border-color: salmon;
+    border-width: medium;
+    border-radius: 15px;
     /*resize: vertical;*/
 }
 
@@ -569,6 +824,23 @@ body .container section h1 {
     padding: 12px 36px;
     background: linear-gradient(90deg, #0162c8, #55e7fc);
     color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 40px;
+    /*cursor: pointer;*/
+    font-size: 18px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.light-mode #emailSend {
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    background: linear-gradient(90deg, #d74d3c, salmon);
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 40px;
