@@ -473,14 +473,14 @@
     /*}*/
     /*projects page*/
     #projectH1 {
-        margin-top: 15%;
-        font-size: 4em;
+        margin-top: 10%;
+        font-size: 3em;
         text-align: center;
     }
 
     .thumbnail {
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
         /*border: 1px solid white;*/
         display: inline-block;
         margin: 10px;
@@ -489,8 +489,8 @@
 
     #movieVid {
         padding-bottom: 7px;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     #moviesText {
@@ -569,8 +569,8 @@
         justify-content: center;
         text-decoration: none;
         color: #f0f6fc;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     .light-mode #githubMovie {
@@ -581,8 +581,8 @@
 
     #coffeeVid {
         padding-bottom: 7px;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
         font-size: 25px;
     }
 
@@ -600,8 +600,8 @@
 
     #contactsManagerVid {
         padding-bottom: 7px;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     #githubCM {
@@ -618,8 +618,8 @@
 
     #weatherVid {
         padding-bottom: 7px;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     #githubweather {
@@ -636,8 +636,8 @@
 
     .comingSoon {
         padding-bottom: 40px;
-        width: 125px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
     }
 
     #githubAd {
@@ -667,31 +667,32 @@
     /*contact page*/
     #contact {
         display: flex;
-        /*flex-direction: row;*/
+        flex-direction: column;
         justify-content: space-around;
     }
 
     #contactH1 {
-        margin-top: 25%;
-        margin-left: 25%;
+        margin-top: 5%;
+        margin-left: 30px;
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
     }
 
     #contactP {
+        display: none;
         height: 200px;
-        width: 200px;
+        width: 400px;
         margin-left: 70px;
     }
 
     .emailForm {
         /*text-align: right;*/
         padding: 20px 10px;
-        margin-top: 20%;
-        margin-right: 15px;
+        margin-bottom: 40%;
+        margin-left: 40px;
         /*margin-right: 60%;*/
         height: 500px;
-        width: 200px;
+        width: 300px;
         color: black;
         border-radius: 1rem;
         border: 1px solid transparent;
