@@ -679,7 +679,7 @@
     }
 
     #contactP {
-        display: none;
+        /*display: none;*/
         height: 200px;
         width: 400px;
         margin-left: 70px;
@@ -3306,7 +3306,7 @@
     /*contact page*/
     #contact {
         display: flex;
-        /*flex-direction: row;*/
+        flex-direction: row;
         justify-content: space-around;
     }
 
@@ -4180,7 +4180,7 @@
         /*contact page*/
         #contact {
             display: flex;
-            /*flex-direction: row;*/
+            flex-direction: row;
             justify-content: space-around;
         }
 
