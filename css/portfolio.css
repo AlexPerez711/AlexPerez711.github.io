@@ -411,8 +411,9 @@
     #aboutP {
         /*flex-flow: column;*/
         margin-top: 10%;
-        width: 250px;
+        width: 70%;
         /*margin-left: 25%;*/
+        margin-left: 15%;
         margin-bottom: 5%;
         font-size: 0.9rem;
     }
