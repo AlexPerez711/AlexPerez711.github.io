@@ -379,14 +379,36 @@
 
     /*Home Page*/
     #homeH1 {
-        margin-top: 25%;
+        /*margin-top: 25%;*/
         font-size: large;
     }
 
     /*Animated text style*/
     .wrapper {
-        display: none;
+        display: flex;
+        height: 100%;
+        padding: 5rem;
+        margin-top: 6%;
     }
+
+    .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 2.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #52e3fb;
+    }
+
+    /*LIGHT MODE*/
+
+    .light-mode .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 2.5em;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: salmon;
+    }
+
 
 
     /*About Page*/
@@ -2893,99 +2915,34 @@
 
     /*Home Page*/
     #homeH1 {
-        margin-top: 25%;
+        /*margin-top: 25%;*/
         font-size: large;
     }
 
     /*Animated text style*/
     .wrapper {
-        display: inline-flex;
+        display: flex;
+        height: 100%;
+        padding: 5rem;
+        margin-top: 6%;
     }
 
-    .wrapper .static-txt {
-        margin-top: 20%;
-        color: white;
-        font-size: 60px;
-        font-weight: 400;
-    }
-
-    /*LIGHT MODE*/
-    .light-mode .wrapper .static-txt {
-        margin-top: 20%;
-        color: black;
-        font-size: 60px;
-        font-weight: 400;
-    }
-
-    .wrapper .dynamic-txts {
-        margin-top: 20%;
-        margin-left: 15px;
-        height: 90px;
-        line-height: 90px;
-        overflow: hidden;
-        text-align: left;
-    }
-
-    .dynamic-txts li {
+    .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 5em;
+        font-weight: 300;
+        text-transform: uppercase;
         color: #52e3fb;
-        list-style: none;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 8s steps(4) infinite;
     }
 
     /*LIGHT MODE*/
-    .light-mode .dynamic-txts li {
+
+    .light-mode .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 5em;
+        font-weight: 300;
+        text-transform: uppercase;
         color: salmon;
-        list-style: none;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 8s steps(4) infinite;
-    }
-
-    @keyframes slide {
-        100% {
-            top: -360px;
-        }
-    }
-
-    .dynamic-txts li span {
-        position: relative;
-    }
-
-    .dynamic-txts li span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: black;
-        border-left: 2px solid #52e3fb;
-        animation: typing 2s steps(11) infinite;
-    }
-
-    /*LIGHT MODE*/
-    .light-mode .dynamic-txts li span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: #5ce1e6;
-        border-left: 2px solid salmon;
-        animation: typing 2s steps(11) infinite;
-    }
-
-
-    @keyframes typing {
-        100% {
-            left: 100%;
-            margin: 0 -35px 0 35px;
-        }
     }
 
     /*About Page*/
@@ -3770,100 +3727,36 @@
     }
 
     /*Home Page*/
+    /*Home Page*/
     #homeH1 {
-        margin-top: 25%;
+        /*margin-top: 25%;*/
         font-size: large;
     }
 
     /*Animated text style*/
     .wrapper {
-        display: inline-flex;
+        display: flex;
+        height: 100%;
+        padding: 5rem;
+        margin-top: 6%;
     }
 
-    .wrapper .static-txt {
-        margin-top: 20%;
-        color: white;
-        font-size: 60px;
-        font-weight: 400;
-    }
-
-    /*LIGHT MODE*/
-    .light-mode .wrapper .static-txt {
-        margin-top: 20%;
-        color: black;
-        font-size: 60px;
-        font-weight: 400;
-    }
-
-    .wrapper .dynamic-txts {
-        margin-top: 20%;
-        margin-left: 15px;
-        height: 90px;
-        line-height: 90px;
-        overflow: hidden;
-        text-align: left;
-    }
-
-    .dynamic-txts li {
+    .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 5em;
+        font-weight: 300;
+        text-transform: uppercase;
         color: #52e3fb;
-        list-style: none;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 8s steps(4) infinite;
     }
 
     /*LIGHT MODE*/
-    .light-mode .dynamic-txts li {
+
+    .light-mode .wrapper .heading {
+        /*margin-top: 20%;*/
+        font-size: 5em;
+        font-weight: 300;
+        text-transform: uppercase;
         color: salmon;
-        list-style: none;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 8s steps(4) infinite;
-    }
-
-    @keyframes slide {
-        100% {
-            top: -360px;
-        }
-    }
-
-    .dynamic-txts li span {
-        position: relative;
-    }
-
-    .dynamic-txts li span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: black;
-        border-left: 2px solid #52e3fb;
-        animation: typing 2s steps(11) infinite;
-    }
-
-    /*LIGHT MODE*/
-    .light-mode .dynamic-txts li span::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: #5ce1e6;
-        border-left: 2px solid salmon;
-        animation: typing 2s steps(11) infinite;
-    }
-
-
-    @keyframes typing {
-        100% {
-            left: 100%;
-            margin: 0 -35px 0 35px;
-        }
     }
 
     /*About Page*/
