@@ -1,0 +1,139 @@
+@media screen and (max-width: 768px) {
+    svg {
+        display: flex;
+        font-family: 'Russo One', sans-serif;
+        /*position: absolute;*/
+        width: 100%;
+        height: 100%;
+        margin-left: 7%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    svg text {
+        /*text-transform: uppercase;*/
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: ghostwhite;
+        font-size: 140px;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(72, 138, 20, 0);
+            stroke:ghostwhite;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+        }
+        80% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+            stroke-width: 3;
+        }
+        100% {
+            fill: ghostwhite;
+            stroke: rgba(54, 95, 160, 0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    svg {
+        display: flex;
+        font-family: 'Russo One', sans-serif;
+        /*position: absolute;*/
+        width: 100%;
+        height: 50%;
+        margin-left: 5%;
+        margin-bottom: -10%;
+    }
+
+    svg text {
+        /*text-transform: uppercase;*/
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: ghostwhite;
+        font-size: 140px;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(72, 138, 20, 0);
+            stroke:ghostwhite;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+        }
+        80% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+            stroke-width: 3;
+        }
+        100% {
+            fill: ghostwhite;
+            stroke: rgba(54, 95, 160, 0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    svg {
+        display: flex;
+        font-family: 'Russo One', sans-serif;
+        /*position: absolute;*/
+        width: 80%;
+        height: 50%;
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-bottom: -5%;
+    }
+
+    svg text {
+        /*text-transform: uppercase;*/
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: ghostwhite;
+        font-size: 140px;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(72, 138, 20, 0);
+            stroke:ghostwhite;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+        }
+        80% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: ghostwhite;
+            stroke-width: 3;
+        }
+        100% {
+            fill: ghostwhite;
+            stroke: rgba(54, 95, 160, 0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+}

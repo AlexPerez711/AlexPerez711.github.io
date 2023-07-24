@@ -61,9 +61,7 @@ const resolver = {
     }
 }
 
-/* Some GLaDOS quotes from Portal 2 chapter 9: The Part Where He Kills You
- * Source: http://theportalwiki.com/wiki/GLaDOS_voice_lines#Chapter_9:_The_Part_Where_He_Kills_You
- */
+
 const strings = [
     "hi i'm alex",
     "a software developer",
@@ -77,7 +75,7 @@ const options = {
     // Initial position
     offset: 0,
     // Timeout between each random character
-    timeout: 5,
+    timeout: 8,
     // Number of random characters to show
     iterations: 10,
     // Random characters to pick from
@@ -99,7 +97,7 @@ function callback() {
 
         let nextOptions = Object.assign({}, options, {resolveString: strings[counter]});
         resolver.resolve(nextOptions, callback);
-    }, 1000);
+    }, 1300);
 }
 
 resolver.resolve(options, callback);

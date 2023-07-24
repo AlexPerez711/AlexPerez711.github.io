@@ -4003,16 +4003,16 @@
     }
 
     #contactP {
-        height: 200px;
-        width: 70%;
+        /*height: 200px;*/
+        width: 50%;
         margin-left: 20%;
     }
 
     .emailForm {
         /*text-align: right;*/
         padding: 20px 10px;
-        margin-top: 25%;
-        margin-right: 200px;
+        margin-top: 45%;
+        margin-left: -90%;
         /*margin-right: 60%;*/
         height: 500px;
         width: 500px;
