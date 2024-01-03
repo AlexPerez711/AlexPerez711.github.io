@@ -423,20 +423,20 @@
 
     #aboutH1 {
         /* margin-top: 5%; */
-        font-size: 3em;
+        font-size: 2.5em;
         width: 100%;
         /*height: 60px;*/
-        margin-top: 7%;
+        margin-top: 4%;
     }
 
     #aboutP {
         /*flex-flow: column;*/
-        margin-top: 7%;
-        width: 70%;
+        margin-top: 2%;
+        width:65%;
         /*margin-left: 25%;*/
-        margin-left: 15%;
-        margin-bottom: 7%;
-        font-size: 0.9rem;
+        margin-left: 18%;
+        margin-bottom: 5%;
+        font-size: 0.7em;
     }
 
     #Headshot {
@@ -449,7 +449,7 @@
 
     #headshotPic {
         border-radius: 20%;
-        height: 250px;
+        height: 15em;
 
     }
 
@@ -657,7 +657,7 @@
         margin-top: 5%;
         margin-left: 30px;
         text-align: center;
-        font-size: 40px;
+        font-size: 2em;
     }
 
     #contactP {
@@ -673,7 +673,7 @@
         margin-bottom: 60%;
         margin-left: 19%;
         /*margin-right: 60%;*/
-        height: 500px;
+        height: 60%;
         width: 70%;
         color: black;
         border-radius: 1rem;
@@ -699,7 +699,7 @@
     }
 
     #message {
-        height: 250px;
+        height: 15em;
         border-color: #55e7fc;
     }
 
@@ -744,6 +744,7 @@
         /*overflow: hidden;*/
         width: 50%;
         margin-left: 25%;
+        margin-top: -7%;
     }
 
     .light-mode #emailSend {
